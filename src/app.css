@@ -1,43 +1,79 @@
-.app{
+.app {
     height: 100vh;
     display: flex;
-    background-color: #020230;
     color: white;
+    background-color: #020230;
 }
 
-.main{
-    width: 75%; 
-    background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("./sounds/kbc.jpg") center;
-    object-fit: cover;
+.main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+        url("https://i.ytimg.com/vi/yQbJRGs0fy8/maxresdefault.jpg") center;
     display: flex;
     flex-direction: column;
 }
 
-.top{
+.pyramid {
+    width: 25%;
+    background-color: #020230;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moneyList {
+    padding: 20px;
+    list-style: none;
+    width: 100%;
+}
+
+.moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.moneyListItem.active {
+    background-color: teal;
+}
+
+.moneyListItemNumber {
+    width: 30%;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.moneyListItemAmount {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.top {
     height: 50%;
     position: relative;
 }
 
-.timer{
+.timer {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 5px soild white;
+    border: 5px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    font-weight: 700;
     position: absolute;
     bottom: 10px;
     left: 80px;
+    font-size: 30px;
+    font-weight: 700;
 }
 
-.bottom{
+.bottom {
     height: 50%;
 }
 
-.trivia{
+.trivia {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -45,52 +81,61 @@
     justify-content: space-around;
 }
 
-.question{
+.question {
     width: 80%;
     background: linear-gradient(#100241, black);
-    border: 2px solid white;
     text-align: center;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 2px solid white;
     font-size: 20px;
 }
 
-.answers{
+.answers {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.answer{
+.answer {
     width: 40%;
     padding: 10px;
+    margin: 0 10px 20px 10px;
     text-align: center;
     background: linear-gradient(#0e0124, #22074d);
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 15px;
-    font-size: 20px;
     font-weight: 300;
+    font-size: 20px;
     cursor: pointer;
-    margin: 0 10px 20px 10px;
 }
 
-.answer:hover, .answer.active{
+.answer:hover,
+.answer.active {
     background: mediumblue;
 }
 
-.answer.correct{
+.answer.correct {
     animation: correct 3s ease forwards;
 }
 
 @keyframes correct {
-    0%, 22%, 42%{
+
+    0%,
+    22%,
+    42% {
         background: mediumblue;
     }
-    20%, 40%, 60%{
-        background: linear-gradient(#0e0124, #22074d);  
+
+    20%,
+    40%,
+    60% {
+        background: linear-gradient(#0e0124, #22074d);
     }
-    62%, 100%{
+
+    62%,
+    100% {
         background: green;
     }
 }
@@ -119,36 +164,61 @@
     }
 }
 
-
-.pyramid{
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.endText {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
-.moneyList{
-    list-style: none;
+.start {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.startInput {
     width: 100%;
-    padding:  20px;
-}
-.moneyListItem{
-    display: flex;
-    align-items: center;
-    padding: 5px;
+    height: 30px;
+    border: none;
     border-radius: 5px;
-}
-
-.moneyListItem.active{
-    background-color: teal;
-}
-
-.moneyListItemNumber{
+    text-align: center;
     font-size: 18px;
-    font-weight: 100;
-    width: 30%;
 }
-.moneyListItemAmount{
-    font-size: 20px;
-    font-weight: 300;
+
+.startInput:focus {
+    outline: none;
+}
+
+.startButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.intro{
+    position: absolute;
+    bottom: -130px;
+    text-align: center;
+    margin-bottom: -100px;
+    padding: 10px;   
+}
+.into{
+    
+    color: red;
 }
