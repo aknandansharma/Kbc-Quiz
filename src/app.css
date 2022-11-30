@@ -15,7 +15,7 @@
 
 .pyramid {
     width: 25%;
-    background-color: #020230;
+    background-color: #020230a4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,17 +25,21 @@
     padding: 20px;
     list-style: none;
     width: 100%;
+    border: 10px solid rgb(236, 180, 24);
+    border-radius: 20px;
 }
 
 .moneyListItem {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 1px;
+    margin: 4px;
+    border: 2px solid rgb(14, 80, 14);
     border-radius: 5px;
 }
 
 .moneyListItem.active {
-    background-color: teal;
+    background-color: red;
 }
 
 .moneyListItemNumber {
@@ -100,7 +104,7 @@
 }
 
 .answer {
-    width: 40%;
+    width: 39%;
     padding: 10px;
     margin: 0 10px 20px 10px;
     text-align: center;
